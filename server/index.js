@@ -114,9 +114,7 @@ const getQuotes = (req, res, next) => {
 };
 
 // TODO: Register endpoints here
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
+
 // GET /api/quotes
 app.get("/api/quotes", serverData);
 // GET /api/quotes/:id
