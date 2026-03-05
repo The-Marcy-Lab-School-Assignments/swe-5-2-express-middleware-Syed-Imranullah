@@ -80,9 +80,6 @@ app.use(logRoutes);
 // 2. express.static() — generates middleware that serves files from the frontend/ folder
 //    Use path.join(__dirname, '../frontend') to construct the absolute path
 let pathToFrontend = path.join(__dirname, '../frontend');
-if (process.env.NODE_ENV === 'production') {
-  pathToFrontend = path.join(__dirname, '../frontend/dist');
-}
 // TODO: Register middleware with app.use() before the controllers
 const serveStatic = express.static(pathToFrontend);
 app.use(serveStatic);
